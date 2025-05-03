@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Stampaci</title>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="100">
+
+<h2>Štampač (Printer)</h2>
+<div align="center"><center>
+
+<table border="0" cellpadding="7">
+    <tr>
+        <td><a href="#_MatrStampac"><img src="../images/stampac_epson_lx-300.gif" border="0" width="216" height="144"></a></td>
+        <td><a href="#_LaserStampac"><img src="../images/hp_5l.gif" border="0" width="185" height="158"></a></td>
+        <td><a href="#_ColorStampac"><img src="../images/stampac_stylus_color_200.gif" border="0" width="216" height="144"></a></td>
+    </tr>
+    <tr>
+        <td>Matrični </td>
+        <td>Laserski</td>
+        <td>Color Ink Jet</td>
+    </tr>
+</table>
+</center></div>
+
+<p>Uređaj zadužen za beleženje na papir. Postoji nekoliko
+tehnologija pisanja.</p>
+
+<ul>
+    <li>Ink Jet je sa mastilom koje se u tankim mlazovima nanosi
+        na, obično, kvalitetniji papir.</li>
+    <li>Laserska, koja daje vrlo jasne i dugotrajne kopije</li>
+    <li>Matrix, koja uz pomoć iglica može da štampa do u
+        beskonačnost.</li>
+</ul>
+
+<p>Postoje i programski jezici (PDL - Page Description Language),
+koji su posebno pisani za korespodenciju sa štampačima. HP-PCL
+i <a href="#_Toc324665467">PostScript</a> su jedni od najčešće
+korišćenih za laserske štampače. Kod matričnih štampača
+standardni jezik su EPSON eskejp sekvence (EPSON Escape codes).</p>
+
+<hr>
+
+<p>Za komunikaciju sa kompjuterom koriste paralelni port (Line
+PrinTer n) i Centronics kabl. LPT port je interfejs velike brzine
+i komunikacija se može odvijati u oba pravca (8 žica za prenos
+podataka + kontrolne linije).</p>
+
+<p>Koristi sledeće parametre: </p>
+<div align="center"><center>
+
+<table border="1" cellpadding="2" bordercolorlight="#FFFF00">
+    <tr>
+        <td>&nbsp;</td>
+        <td align="center"><font size="3">adresa</font></td>
+        <td align="center"><font size="3">IRQ</font></td>
+    </tr>
+    <tr>
+        <td><font size="3">LPT1</font></td>
+        <td align="center"><font size="2">378h </font></td>
+        <td align="center"><font size="2">7 </font></td>
+    </tr>
+    <tr>
+        <td><font size="3">LPT2</font></td>
+        <td align="center"><font size="2">278h </font></td>
+        <td align="center"><font size="2">5 </font></td>
+    </tr>
+    <tr>
+        <td><font size="3">LPT3</font></td>
+        <td align="center"><font size="2">3BCh </font></td>
+        <td align="center">&nbsp;</td>
+    </tr>
+</table>
+</center></div>
+
+<p>Ređe se za povezivanje koristi serijski port, pošto se u tom
+slučaju informacije sa štampačem razmenjuju preko 2 žice. </p>
+
+<h4><a name="_Toc324665467"></a>Post Script</h4>
+
+<p>Programski jezik za opis strane. Razvijen 1978 u XEROX-u.
+1982. god. ljudi koji su osmislili Post Script osnivaju ADOBE
+SYSTEM Inc. Post Script stranicu koju treba otštampati pretvara
+u informaciju koja se prosleđuje hardveru koji štampa. Kao
+jezik najviše se koristi na Mekintoš računarima i uređajima
+za štampu u štaparskoj industriji. </p>
+
+<h4><a name="_MatrStampac"></a><b>Matrični štampač (DotMatrix
+printer)</b></h4>
+
+<p>Štampa iglicama kojih može biti 9 ili 24. Široko su
+zastupljeni u upotrebi jer su relativno jeftini. Otisak na papiru
+ostavljaju udaranjem iglica u traku sa tintom. Rezolucija 9-to
+igličnih matričnih štampača je nešto preko 100x100 tačaka
+po kvadratnom inču. Rezolucija 24-ro igličnih matričnih
+štampača je 360x360 tačaka po kvadratnom inču.</p>
+
+<h4><a name="_LaserStampac"></a><b>Laserski štampač (Laser
+printer)</b></h4>
+
+<p>Radi na istom principu po kome radi fotokopir aparat.
+Štampanje na laserskom štampaču funkcioniše na sledeći
+način: iz RIP-a logička 0 ili 1 prekida laserski snop koji se
+preko ogledala prenosi na bubanj. Bubanj je osetljiv na svetlo i
+ima neko naelektrisanje. Kada svetlo padne na bubanj ta tačka
+izgubi naelektrisanje. Toner je istog naelektrisanja kao i
+bubanj. Toner se hvata za bubanj samo tamo gde je bubanj
+depolarizovan.</p>
+
+<p>Rezolucija laserskog štampača je od 300 x 300 tačaka po
+kvadratnom inču. Nekoliko puta su skuplji od matričnih
+štampača ali su isto toliko kvalitetniji i brži.</p>
+
+<p>Najpoznatija firma koja proizvodi <a href="hw_stampac_hp.htm">laserske
+štampače</a> zove se Hewlett Packard. Njihova adresa na
+Internetu je <a href="http://hpcc920.external.hp.com/">www.HP.com.</a></p>
+
+<h4><a name="_inkJetStampac"></a>Ink Jet štampač</h4>
+
+<p>Nova tehnologija štampe, tinta se brizga iz jako tankih dizni
+po papiru. Jeftina izrada, nema grejanja ali se zato štampani
+materijal nikako ne slaže s vlagom. Ako dođe u kontakt sa
+vlažnim vazduhom, papir nabubri i mastilo se otire. Najveću
+primenu zbog: cene, lakoće upotrebe i malih dimenzija našli su
+kao podrška notebook i lap-top kompjutera. Proizvodi ih nekoliko
+firmi ali je <a href="http://www.epson-deutschland.de/eng/">EPSON</a>
+najpoznatiji i najkvalitetniji. Rezolucija u kojoj ovi štampači
+rade je: 300 x 300, 600 x 600 i 720 x 720 dpi.</p>
+
+<h4><a name="_ColorStampac"></a>Color štampač</h4>
+
+<p>Postoji nekoliko tehnologija pomoću kojih je moguće dobiti
+kolor otisak. Oslanjajući se na principe na kojima radi
+crno-beli štampač, EPSON je razvio najpopularniju seriju <a href="hw_stampac_stylus.htm">Stylus COLOR</a> štampača. Tako pored crnog
+mastila postoje i kertridži sa tri osnovne štamparske boje boje
+C, M i Y. Serija Stylus COLOR štampača radi u rezolucijima: 720
+x 1440 i 1440 x 1440.</p>
+</body>
+</html>

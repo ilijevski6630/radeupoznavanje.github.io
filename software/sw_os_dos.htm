@@ -1,0 +1,412 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>MS DOS</title>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="100">
+
+<h1><a name="_IstorijatDOSa"></a>MS DOS </h1>
+
+<hr>
+
+<p>Kratki informator o nastanku i razvoju najrasprostanjenijeg <a href="../intro/intro_terminologija.htm#_OpertivniSistem">operativnog sistema</a> na
+kućnim kompjuterima. 
+
+<dl>
+  <dt><a href="#_istorijat">Istorijat MS DOS-a</a></dt>
+  <dt><a href="#Bekusova">Bekusova notacija</a></dt>
+  <dt><a href="#Rad u MS">Rad u MS DOS-u</a></dt>
+  <dd>CONFIG.SYS</dd>
+  <dd>AUTOEXEC:BAT</dd>
+  <dt><a href="#Osnovne komande MS">Osnovne komande DOS-a</a></dt>
+  <dd>VER</dd>
+  <dd>DIR</dd>
+  <dd>TREE</dd>
+  <dd>MD</dd>
+  <dd>RD</dd>
+  <dd>CD</dd>
+  <dd>COPY</dd>
+  <dd>DEL</dd>
+  <dd>PROMPT</dd>
+  <dd>PATH</dd>
+  <dt><a href="#Boot">BOOT disketa</a></dt>
+  <dt><a href="#BAT">BAT procedure</a></dt>
+</dl>
+
+<hr>
+
+<p><a name="_istorijat"></a>Istorijat MS DOS-a 
+
+<ul>
+  <li>1981. Prva verzija MS DOS-a. Isporučivao se na flopi disku od 160 kB. </li>
+  <li>1983. v2.0 Podrška za korišćenje Hard diska, direktorijuma ... </li>
+  <li>1984. v3.0 Podrška za FDD 1.2MB, rad u mreži. </li>
+  <li>1985 u Novembru, DOS je dobio svoj grafički &quot;nastavak&quot;, Microsoft Windows
+    v1.0. </li>
+  <li>1987. v3.3 Napravljena za podršku PS/2 kompjutera, uvedeni u korišaenje flopi drajvovi
+    od 1.44MB, particije do 32MB. </li>
+  <li>1988. v4.0 Podržane particije preko 32MB. </li>
+  <li>1990. u Maju, pojavljuje se Windows v.3.0. </li>
+  <li>1991. v5.0 Podrška 386 i 486 kompjuterima, rad sa više Hard diskova, FDD 2.88MB. Uz MS
+    DOS dobijate i kompletnu verziju MS QBASIC-a. Zauzima 2MB na Hard disku. Omogućena
+    solidna kontrola zone visoke memorije. Krajem godine izlazi nova verzija Windows-a (3.1). </li>
+  <li>1993. v6.0 Usavršena v5.0 sa dodatnim Utiliti programima za koje je Microsoft otkupio
+    prava od malih nezavisnih proizvođača. Uz MS DOS dobijate: program za dupliciranje
+    kapaciteta diska, zaštitu od virusa i automatsko instaliranje sistema za upravljanje
+    visokom memorijom. </li>
+  <li>1993. 30. Septembra izlazi verzija 6.2. Problemi oko autorskih prava, sa nezavisnim
+    proizvođačima od kojih su prepisali sistem za kompresiju diska u verziji 6.0, naterali
+    su Microsoft da primeni neke svoje tehnologije. Verzija 6.2 omogućava komotan rad svojim
+    korisnicima i na disku zauzima oko 6MB. </li>
+  <li>1995. 25. Avgusta zvanično izlazi OS Windows95 koji uz sebe ima i MS DOS 7.0 da bi
+    zadržao kompatibilnost sa prethodnim verzijama MS DOS -a.</li>
+</ul>
+
+<hr>
+
+<p>Bekusova notacija<a name="Bekusova"></a> </p>
+
+<p>Pre početka rada sa MS DOS naredbama a kasnije sa ostalim programima, upoznaćemo Vas
+sa Bekusovom notacijom. Uputstva za startovanje svakog dobrog programa ili naredbe možete
+dobiti tako što pored imena otkucate /?. Pravilo je da se službene reei ( naredbe ili
+ime programa ) pišu velikim slovima a parametri koji se prosleđuju, malim. </p>
+
+<blockquote>
+  <p>&lt; &gt; sve što se nalazi između oznaka &quot;manje&quot; ( &lt; ) i
+  &quot;veće&quot; ( &gt; ), mora se kucati uz ime programa ili naredbe. </p>
+</blockquote>
+
+<blockquote>
+  <p>[ ] sve što se nalazi između uglastih zagrada ( [ i ] ) koristi se kao opcija ( može
+  ali ne mora ). </p>
+</blockquote>
+
+<blockquote>
+  <p>¦ navodi se između vrednosti od kojih samo jedna može biti upisana. Npr.:
+  [OFF¦on¦auto]. Veliko OFF znači da je to predefinisano stanje i bez navođenja
+  parametra. </p>
+</blockquote>
+
+<blockquote>
+  <p>... ponavljanje prethodno navedenog. Npr.: SCAN C: ... [/bell] znači da prethodno
+  navedene oznake mogu da se ponavljaju po potrebi. U ovom slučaju bi to izgledalo ovako:
+  SCAN C: D: E: [/bell] </p>
+</blockquote>
+
+<p>Na primer vrlo često ćete koristiti arhiver ARJ i pokazaće Vam sledeću sintaksu
+posle: ARJ /? </p>
+
+<blockquote>
+  <p><tt>ARJ &lt;command&gt; [-&lt;sw&gt;[-&lt;sw&gt;...]] &lt;archive_name&gt;
+  [&lt;file_names&gt;...]</tt></p>
+</blockquote>
+
+<p>što znači sledeće: </p>
+
+<blockquote>
+  <p>ARJ komanda_za_arhiviranje ime_arhive</p>
+</blockquote>
+
+<pre>moraju biti otkucani a sve ostalo ( [-&lt;sw&gt;[-&lt;sw&gt;...]] i [&lt;file_names&gt;...] ) po potrebi.</pre>
+
+<blockquote>
+  <p><tt>ARJ a -r test *.txt</tt></p>
+</blockquote>
+
+<p>ARJ će komandom a (command) spakovati iz svih poddirektorijuma svieem -r (sw) u arhivu
+test (archive_name), sve .txt fajlove ( file_names ).</p>
+
+<hr>
+
+<h2><a name="Rad u MS"></a>Rad u MS DOS-u <img src="../images/i_msdos.gif" WIDTH="45" HEIGHT="45"></h2>
+
+<p>Posle uspešnog butovanja kompjuter je spreman za rad sa operativnim sistemom ili
+programima koje imate na svom kompjuteru. </p>
+
+<p>U toku butovanja iztestirao je grafičku karticu, tastaturu zatim hard i flopi drajvove
+i najzad konfigurisao sistem prema zapisu u fajlu CONFIG.SYS. Prema zapisu u fajlu
+AUTOEXEC.BAT definiše PATH i ispisuje PROMPT, eventualno staruje neki programčić ili
+proceduru. To se izvršava svaki put kada se kompjuter uključi ili resetuje tasterom na
+kuaištu. Ukoliko se to sve desi a da kompjuter ne prijavi greške, kaže se: &quot;sistem
+se podigao&quot;. U suprotnom, početnicima se savetuje da potraže pomoć stručnog lica.
+</p>
+
+<p>Kod MS DOS operativnog sistema, o kome ovde pišemo, da bi se sistem podigao morate
+imati <a href="#Boot">BOOT disketu</a> ili Hard disk na kome se nalaze makar
+sistemski fajlovi COMMAND.COM, IO.SYS i MSDOS.SYS. </p>
+
+<p>Kao budući pedantni korisnik kompjutera, BOOT disketu ste napravili po kupovini istog
+ili ste je već dobili uz kompjuter (što je siguran znak da je firma solidna). Druga
+NAJBITNIJA stvar po kupovini kompjutera, ili kod kompjutera koji korstite, je prepisati
+ili odštampati podatke iz Setup-a. Na taj način ste sebe delimično, uglavnom dovoljno,
+zaštitili od slučaja kada se kaže da je &quot;pao sistem&quot;. Ne zaboravite da Vaš
+&quot;mališa&quot; nije besmrtan i nepovrediv. </p>
+
+<p>&quot;Padanje sistema&quot; dešava se samo početnicima, kasnije se taj problem
+rutinski rešava. To u stvari znači da je kompjuter izgubio sistemske fajlove, ili da su
+pogubljeni podaci iz Setup-a. U prvom slučaju će od Vas tražiti boot disketu sa
+COMMAND.COM-om (istom verzijom MS DOS-a kao što je MS DOS instaliran na Vašem Hard
+disku). U drugom slučaju, ako nemate prepisane podatke, najverovatnije ćete imati
+slobodan preostali deo dana dok Vam stručno lice ne &quot;podigne sistem&quot;. Imajte u
+vidu da u ovim slučajevima nestručnim rukovanjem možete izgubiti sve podatke sa Hard
+diska. </p>
+
+<p>Do ovog nivoa svi PC kompjuteri su jednaki i održavanje je posao sistemskog
+inženjera. Od ovog nivoa svaki kompjuter se razlikuje po tome čemu je namenjen.
+Definisanje tih razlika počinje u fajlovima: 
+
+<dl>
+  <dt><a href="sw_os_autoconfig.htm#_CONFIG">CONFIG.SYS</a> za softversko kongfigurisanje
+    sistema. </dt>
+  <dt><a href="sw_os_autoconfig.htm#_AUTOEXEC">AUTOEXEC.BAT</a> za podešavanje programskog
+    okruženja. </dt>
+</dl>
+
+<p>Primer po kome ćemo savladati osnove operativnog sistema nalazi se na ProCOM boot
+disketi, koju ste dobili uz ovo uputstvo. Bez obzira šta ćete raditi na kompjuteru
+morate znati najosnovnije pojmove i naredbe MS DOS-a. Sve interne naredbe MS DOS-a nalaze
+se u fajlu COMMAND.COM a eksterne u \DOS direktorijumu na Hard disku. </p>
+
+<p>HELP naredba će Vam dati spisak svih internih i externih naredbi sa kratkim
+objašnjenjem u jednoj liniji. Za svaku od njih možete pročitati HELP o korišćenju
+ukoliko pored naziva naredbe otkucate i ime naredbe ko za koju Vam je potrebna pomoć. </p>
+
+<p>Na primer: </p>
+
+<blockquote>
+  <p><tt>DIR /?</tt></p>
+</blockquote>
+
+<p>Pokazaće sve informacije o korišćenju naredbe DIR sa svičevima. Ako kucate samo DIR
+dobijate spisak direktorijuma i svih fajlova u tekućem direktorijumu. Za sve njih pored
+imena i extenzije fajla dobijate i informacije o tome kada je fajl ili direktorijum
+kreiran (datum i vreme), koliko mesta zauzima na disku. U poslednjoj liniji posle zbirnog
+izveštaja ispisano je i koliko je mesta preostalo na disku. </p>
+
+<blockquote>
+  <p><tt>HELP dir</tt></p>
+</blockquote>
+
+<p>daje detaljne informacije za naredbu DIR.</p>
+
+<hr>
+
+<h2><a name="Osnovne komande MS"></a>Osnovne komande MS DOS-a</h2>
+
+<dl>
+  <dt><a href="#__VER">VER</a></dt>
+  <dt><a href="#__DIR">DIR</a></dt>
+  <dt><a href="#__TREE">TREE</a></dt>
+  <dt><a href="#__MD">MD</a></dt>
+  <dt><a href="#__RD">RD</a></dt>
+  <dt><a href="#__CD">CD</a></dt>
+  <dt><a href="#__COPY">COPY</a></dt>
+  <dt><a href="#__DEL">DEL</a></dt>
+  <dt><a href="#__PROMPT">PROMPT</a></dt>
+  <dt><a href="#__PATH">PATH</a></dt>
+</dl>
+
+<h4><a name="__VER"></a>VER </h4>
+
+<p>Informacije o operativnom sistemu koji se nalazi na kompjuteru na kome radite. Svakako
+prva komanda koju bi trebalo startovati kada sednete za nepoznati kompjuter. </p>
+
+<h4><a name="__DIR"></a>DIR </h4>
+
+<p>Prikazuje sve fajlove koji se nalaze u tekućem direktorijumu, i podatke: datum, vreme
+i koliko mesta zauzimaju na disku. Ukoliko naredbu kucate sa &quot;svičem&quot; odnosno
+sa znakom &quot;/&quot; i parametrom koji se prosleđuje uz naredbu, možete dobiti još
+podataka o fajlovima u tekućem ali i u svim poddirektorijumima. </p>
+
+<h4><a name="__TREE"></a>TREE </h4>
+
+<p>ROOT (Rut) predstavlja koren (root) &quot;stabla&quot; koje čine direktorijumi na Hard
+disku. U rutu C: diska moraju se nalaziti sistemski fajlovi, CONFIG.SYS i AUTOEXEC.BAT.
+SVE ostale fajlove smeštate u odgovarajuće direktorijume koje ćete sami kreirati a koji
+se mogu videti kao grana zamišljenog stabla. </p>
+
+<blockquote>
+  <div align="left"><pre>TREE je naredba kojom se grafički prikazuje kako je to naše &quot;stablo&quot; (TREE) razgranato. </pre>
+  </div>
+</blockquote>
+
+<h4><a name="__MD"></a>MD </h4>
+
+<p>Make Directory, naredba kojom se kreiraju novi direktorijumi na disku. Dirktorijumi su
+uslovno rečeno police u Vašem lepo složenom ormanu. </p>
+
+<blockquote>
+  <p><tt>MD test</tt></p>
+</blockquote>
+
+<p>Kreira direktorijum sa nazivom test. Preporučljivo je kada dobijete novi softver na
+disketi, napraviti privremeni direktorijum kao u primeru. Izvršavanje programa na Hard
+disku mnogo je brže a flopi disk drajv ae Vam biti slobodan za intervencije ukoliko je
+potrebno. </p>
+
+<h4><a name="__RD"></a>RD </h4>
+
+<p>Remove Directory, brisanje postojećih direktorijuma sa diska. Možete brisati samo
+direktorijume koji ne sadrže fajlove u sebi. </p>
+
+<blockquote>
+  <pre>RD test</pre>
+</blockquote>
+
+<p>briše direktorijum test sa diska ukoliko je prazan. </p>
+
+<h4><a name="__CD"></a>CD </h4>
+
+<p>Change Directory, prelazak u parametrom navedeni direktorijum. </p>
+
+<blockquote>
+  <pre>CD test</pre>
+</blockquote>
+
+<p>promeni direktorijum u test. Sa starijeg direktorijuma prelazite u poddirektorijum
+test. </p>
+
+<h4><a name="__COPY"></a>COPY </h4>
+
+<p>Kopiranje fajlova sa disketa na disk, drugu disketu ili sa diska na disk i disketu.
+Često se koristi u svakodnevnom radu. Korisno je upotrebljavati u sledeaoj formi, npr: </p>
+
+<blockquote>
+  <pre>COPY a:\*.* /v </pre>
+</blockquote>
+
+<p>kopira sve fajlove sa A: diskete uz proveru da li je sve jednako izkopirano. </p>
+
+<h4><a name="__DEL"></a>DEL </h4>
+
+<p>Brisanje fajlova posebno ili po grupama. Ako navedete fajl po imenu, briše samo
+navedeni fajl. </p>
+
+<blockquote>
+  <pre><tt>DEL *.*</tt></pre>
+</blockquote>
+
+<p>Briše sve fajlove u tekućem direktorijumu. </p>
+
+<blockquote>
+  <h4><tt>DEL *.bak</tt></h4>
+</blockquote>
+
+<p>Briše sve stare verzije fajlova (BAcKup) </p>
+
+<blockquote>
+  <p><tt>DEL *.bak /p</tt></p>
+</blockquote>
+
+<p>Nudi za brisanje sve .BAK verzije. Odgovarate sa Yes ili No (Y/N) (Da/Ne)</p>
+
+<p>&nbsp;</p>
+
+<hr>
+
+<p align="center"><img src="../images/i_nota.gif" WIDTH="32" HEIGHT="32"><b>Važno!!! Budite oprezni sa DEL
+naredbom! Podatke možete vratiti sa naredbom UNDELETE, ali neka to ostane samo kao
+moguanost. </b></p>
+
+<hr>
+
+<h4><a name="__PROMPT"></a>PROMPT </h4>
+
+<p>PROMPT je prva naredba sa kojom se srećete u MS DOSu jer je navedena odmah u <a href="sw_os_autoconfig.htm#_AUTOEXEC">AUTOEXEC.BAT</a>u. Uloga joj je da Vam pomoću nje
+sistem prikaže, u liniji u kojoj čeka naredbu, podatke o tekućem disku i direktorijumu
+u kome se nalazite. </p>
+
+<blockquote>
+  <pre><tt>PROMPT $p$g</tt></pre>
+</blockquote>
+
+<p>ispisuje podatke o tekućem disku i tekućem direktorijumu. </p>
+
+<blockquote>
+  <pre><tt>PROMPT $t</tt></pre>
+</blockquote>
+
+<p>će prikazivati samo podatke o tekućem vremenu umesto gore navedenih. </p>
+
+<h4><a name="__PATH"></a>PATH </h4>
+
+<p>Takođe se nalazi u <a href="sw_os_autoconfig.htm#_AUTOEXEC">AUTOEXEC.BAT</a>u.
+Označava putanju ( PATH ) po kome kompjuter treba da traži fajlove potrebne za rad
+ukoliko ih nema u tekućem direktorijumu. Naredba nebi trebalo da bude duža od 128
+bajtova. </p>
+
+<hr>
+
+<h2>Boot disketa<a name="Boot"></a> </h2>
+
+<p>Mora biti disketa koja se koristi u flopi drajvu sa oznakom A:. Kapacitet takođe mora
+biti odgovarajući (1.44MB za 3.5&quot; i 1.2MB za 5.25&quot;). Formira se na sledeai
+način: </p>
+
+<p>U A: drajv ubacite disketu i na tastaturi otkucate naredbu: </p>
+
+<blockquote>
+  <h4><tt>FORMAT A: /s /u /v:BOOT</tt></h4>
+</blockquote>
+
+<p>time ste sistemu naložili da formatira disketu bez čuvanja unformat informacija ( /u
+), da na nju prebaci sistemske fajlove (/s) i da je nazove BOOT (v:BOOT). </p>
+
+<p>Tom disketom ćete ubuduće moći da podignete sistem. Kada budete u potpunosti
+savladali MS DOS moći ćete da prebacite fajlove MS DOSa i na ovu disketu tako da će
+sistem moći i da se podigne i da radi sa te diskete. </p>
+
+<p>Sve naredbe oko formatiranja i pravljenja <a href="../images/fdbooteta.gif">BOOT
+disketa</a> pozivajte sa Hard diska ali pazite da pri tome greškom ne date umesto oznake
+diskete (A: ili B:) oznaku logičkog diska (C:, D:, E: itd.) i tako uništite podatke koje
+ste imali. </p>
+
+<hr>
+
+<h2>BAT procedure<a name="BAT"></a> </h2>
+
+<p>Vrlo su korisne i proste za pisanje a svaki put Vam uštede dosta živaca kada treba da
+obavite neki posao koji se sastoji iz nekoliko koraka ili pozivanje nekih prethodnih
+procedura. </p>
+
+<p>Znanje MS DOSa Vam je potrebno kao osnovna kompjuterska kultura. Sve ovo mnogo lakše,
+ali ne znaei i mnogo brže, može se raditi iz ogromnog broja <a href="sw_appl_util.htm#_Toc324665433">UTILITY (pomoćnih) programa</a>. Iza svih lepo
+oblikovanih menija i poruka kriju se iste naredbe i operacije koje smo prethodno opisali. </p>
+
+<p>Zapamtite, redosled startovanja izvršnih fajlova sa istim imenom: interna naredba (u
+COMMAND.COM-u), *.COM, *.EXE i na kraju *.BAT. </p>
+
+<blockquote>
+  <p><tt><b>SPAKUJ.BAT<br>
+  <br>
+  </b>@echo off<br>
+  echo.<br>
+  echo ARJ bat za pakovanje bas svih fajlova iz tekuceg i svih<br>
+  echo poddirektorijuma<br>
+  echo u arhive od 1.44MB bez deljenja fajlova sa testiranjem arhive<br>
+  echo.<br>
+  echo sintaksa ARJPAK arhiva [fajlovi]<br>
+  echo.<br>
+  if &quot;%1&quot; == &quot;&quot; goto end<br>
+  ARJ a %1 %2 -r -y -vvw1440 -a1 -jt -z<br>
+  :end</tt></p>
+</blockquote>
+
+<blockquote>
+  <pre><tt><b>SLOZI.BAT
+
+</b>@ echo off
+echo.
+echo Sada cemo da slozimo fajlove na disku %1
+echo.
+NDD %1 /c
+SPEEDISK %1 /f /v
+echo.
+echo Slozio sam disk %1</tt></pre>
+</blockquote>
+</body>
+</html>

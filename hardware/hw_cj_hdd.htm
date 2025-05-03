@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Hard drajv</title>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="100">
+
+<h2>Hard disk drajv</h2>
+<div align="center"><center>
+
+<table border="0" cellpadding="7" width="600">
+    <tr>
+        <td align="center"><img src="../images/wd_11200_small.gif" width="142" height="202"></td>
+        <td align="center"><img src="../images/wd_21600_small.gif" width="142" height="202"></td>
+        <td align="center"><img src="../images/wd_22100_small.gif" width="142" height="204"></td>
+        <td align="center"><img src="../images/wd_34000_small.gif" width="142" height="207"></td>
+    </tr>
+    <tr>
+        <td align="center"><a href="http://www.wdc.com">WD</a>
+        Caviar 1.2GB</td>
+        <td align="center">WD Caviar 1.6GB</td>
+        <td align="center">WD Caviar 2.1GB</td>
+        <td align="center">WD Caviar 4GB</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+</center></div>
+
+<hr>
+
+<p>Uputstvo za instalaciju InstHDD.PDF</p>
+
+<p>Neprenosivi uređaj unutar kompjutera mnogo većeg kapaciteta
+nego što ga ima flopi disketa. Formatirani kapacitet računa se
+na sledeći način:</p>
+
+<blockquote>
+    <p><tt>Heads x Cylinders x Sectors x 512 bajtova</tt></p>
+</blockquote>
+
+<blockquote>
+    <dl>
+        <dt>Heads - Broj glava Hard diska.</dt>
+        <dt>Cylinders - Ukupni broj cilindara.</dt>
+        <dt>Sectors - Broj sektora po treku. MFM imaju 17, RLL 26
+            a ESDI 34 sektora po treku. SCSI i IDE diskovi mogu
+            imati i veći broj sektora.</dt>
+    </dl>
+</blockquote>
+
+<p>za naš primer to je:</p>
+
+<blockquote>
+    <p><tt>5 x 901 x 51 x 512 = 117 634 560 bajtova ( / 2 20) =
+    112.18 MB</tt></p>
+</blockquote>
+
+<p>Maksimalni kapacitet IDE Hard diska je 26 x 24 x 210 bita
+odnosno 63 x 16 x 1024 x 512 = 528 482 304 bajtova dnosno 528 MB
+(MB ako uslovno milion bajtova izgovarate kao mega bajt) ili 504
+megabajta (MB)</p>
+
+<p>Na sebe može primiti informacije kapaciteta od nekoliko
+stotina flopi disketa. Bez njega je rad na PC kompjuterima u ovo
+vreme nezamisliv. Ne preporueuje se kapacitet manji od 100MB. U
+radu sa kompjuterima, označavanje particija Hard diska počinje
+sa slovom C: i može ih biti do 24 odnosno do oznake Z:.
+Najzastupljenija dva tipa su IDE i SCSI. <br>
+Prilikom transporta kompjutera potrebno je prethodno parkirati
+glave Hard diska. Svi novi modeli Hard diskova imaju tkzv.
+autopark funkciju, glave se automatski parkiraju pre gašenja
+Hard diska. </p>
+
+<p><a name="__IDEinfo"></a><b>IDE (Integrated Drive Electronics) </b><a href="../images/wd_31600_clear.gif"><img src="../images/i_harddisk.gif" width="32" height="32"></a></p>
+
+<p>Najzastupljeniji tip Hard diska. Sa kompjuterom se povezuju
+preko IDE interfejsa na HDD/FDD adapteru. Kapacitet jednog IDE
+diska ne može biti veći od 528MB i mogu se instalirati max. 2
+diska na jedan kompjuter (ili 4 ukoliko imate EIDE adapter).</p>
+
+<p><a name="__EIDEinfo"></a><b>EIDE (Enhanced IDE)</b></p>
+
+<p>Nova verzija IDE diskova koji uz posebne drajvere prevazilaze
+problem sa barijerom od 528MB. Prva grana radi na adresi 1F0, 3F6
+i IRQ 14, a druga na 170, 376 i IRQ 15. Teorijska brzina je 16MB
+u sec. Možete priključiti max 4 IDE diska. </p>
+
+<p><a name="__SCSIHDDinfo"></a><b>SCSI diskovi</b></p>
+
+<p>Diskovi za profesionalnu upotrebu (takva im je i cena),
+uglavnom velikog kapaciteta. SCSI dozvoljava kačenje &quot;u
+lanac&quot; do 7 Hard diskova. Ako svaki ima npr. 4GB trebaće
+Vam dosta vremena da ih popunite. Praktikuje se korišćenje SCSI
+diskova kapaciteta od 2GB pa na više jer su SCSI adapteri
+nekoliko puta skuplji od IDE adaptera. </p>
+
+<p><a name="__HDDENCODEinfo"></a><b>Hard disk encoding sheme</b></p>
+
+<p>Metod pakovanja podataka u track. To je: MFM, RLL ili ARLL.</p>
+</body>
+</html>

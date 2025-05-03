@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Utility programi</title>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="100">
+
+<h1><a name="_Toc324665433"></a>UTILITY programi <img src="../images/i_alat.gif" WIDTH="32" HEIGHT="32"></h1>
+
+<p>Kao svaki dobar majstor morate imati dobar alat. Utility programi su korisničke
+programske alatke namenjene svakodnevnom radu sa uobičajenim operacijama nad fajlovima
+ali u drugačijem korisničkom interfejsu nego što je to u MS DOS-u. Neki programi su <a href="../intro/intro_terminologija.htm#publicdom">besplatni</a> a neki su <a href="../intro/intro_terminologija.htm#shareware">shareware</a>.</p>
+
+<hr>
+
+<dl>
+  <dt><a href="#_Toc324665434">NCD</a></dt>
+  <dt><a href="#_Toc324665435">Arhiveri</a></dt>
+  <dd>ARJ</dd>
+  <dd>PKZIP</dd>
+  <dt><a href="#_Toc324665438">Šta nabaviti?</a></dt>
+  <dd>SPEED</dd>
+  <dd>CORETEST</dd>
+  <dd>DISKDUPE</dd>
+  <dd>NORTON&nbsp;UTILITIES</dd>
+  <dd>WINCAT</dd>
+  <dd>SPACE</dd>
+</dl>
+
+<hr>
+
+<h2><a name="_Toc324665434"></a>NCD (Norton Change Directory) </h2>
+
+<ul>
+  <li>Norton čejndž dajrektori, brz i zgodan alat sa prelaženje iz direktorijuma u
+    direktorijum. Predstavlja živu naredbu <a href="sw_os_dos.htm#__TREE">TREE</a> iz MS
+    DOSa. Ne zaboravite da s vremena na vreme funkcijskim tasterom F2 učitate nove ili
+    eventualno isključite obrisane direktorijume. </li>
+</ul>
+
+<h2><a name="_Toc324665435"></a>ARHIVERI</h2>
+
+<p>Namenjeni su kompresiji i arhiviranju podataka (fajl zauzima manje mesta na disku) i
+grupisanju fajlova u nama potrebne celine. U zavisnosti od tipa fajla, kompresija može
+ići i do 10% originalne veličine. U proseku stepen kompresije iznosi sa raznorodnim
+fajlovima oko 60%. Od arhivera do arhivera razlikuju se način i konfor u radu.
+Najrasprostranjeniji su : ARJ, PKZIP, LHA itd.
+
+<dl>
+  <dt><a href="#_Toc324665436">ARJ</a></dt>
+  <dt><a href="#_Toc324665437">PKZIP</a></dt>
+  <dd>PKUNZIP</dd>
+  <dt><a href="#RVS">RVS</a></dt>
+</dl>
+
+<hr>
+
+<p align="center"><img src="../images/i_nota.gif" WIDTH="32" HEIGHT="32"><b>Važno!!! Uglavnom svi arhiveri mogu
+kreirati self-extract arhive koje imaju .EXE ekstenziju. Na taj način obezbeđujete
+dearhiviranje korisnicima koji nemaju arhiver kojim su fajlovi arhivirani. Sam ARJ
+dobijate zapakovan u arhivi ARJ241.EXE. </b></p>
+
+<hr>
+
+<h3><a name="_Toc324665436"></a>ARJ </h3>
+
+<p>Najrašireniji i slobodno se može reći najkvalitetniji arhiver. Napravljen da radi na
+nekoliko operativnih sistema. Help se može dobiti po starom pravilu da se uz ARJ otkuca <a href="sw_os_dos.htm#Bekusova">/?</a>. Uz sam arhiver dobija se .DOC fajl u kome je na 50
+stranica opisano šta ARJ može da radi. Sintaksa za korišćenje ARJ arhivera glasi: </p>
+
+<blockquote>
+  <p><tt>ARJ &lt;naredba&gt; &lt;imearhive&gt; [opcije] [fajlovi] </tt></p>
+</blockquote>
+
+<p>odnosno: </p>
+
+<blockquote>
+  <p><tt>ARJ a radedoc *.doc </tt></p>
+</blockquote>
+
+<p>kreira u tekućem direktorijumu arhivu koja se zove RADEDOC.ARJ i u nju smešta sve
+fajlove sa ekstenzijom DOC. </p>
+
+<p>Kasnije podatke iz arhive možete dearhivirati u tekući direktorijum sledećom
+naredbom: </p>
+
+<blockquote>
+  <p><tt>ARJ e radedoc </tt></p>
+</blockquote>
+
+<p>ARJ arhiver je prvi bio u moguanosti da velike arhive može deliti na nekoliko jednakih
+celina po kapacitetu koji mi zahtevamo. Vaše arhive možete zaštititi lozinkom, možete
+komentarisati svaki fajl ili celu arhivu i te podatke koristiti kasnije prilikom
+katalogizacije. Brisati fajlove, dodavati ih, raditi BACKUP ili RESTORE diska ili jednom
+rečju, sve. Da nebi morali da pamtite komande, najbolje je da napravite <a href="sw_os_dos.htm#BAT">.BAT</a> fajl koji će to raditi automatski.</p>
+
+<hr>
+
+<p><a name="_Toc324665437"></a></p>
+
+<p>PKZIP </p>
+
+<p>Specifičan, dosta brz arhiver. Jedan od prvih koji su se pojavili u našim krajevima.
+Kreira arhive sa ekstenzijom .ZIP. Odatle i navika da se umesto pojma
+&quot;arhiviranje&quot; koristi &quot;ZIPovanje&quot;. Help za upotrebu PKZIP-a dobija se
+kada se otkuca samo PKZIP. Pratite uputstva na ekranu da bi ste od Vaše arhive napravili
+baš ono što Vam je potrebno. </p>
+
+<p>Sintaksa za prethodni primer uz korišćenje PKZIP-a glasi: </p>
+
+<blockquote>
+  <p><tt>PKZIP [opcije] &lt;ime_arhive&gt; [fajlovi] </tt></p>
+</blockquote>
+
+<p>odnosno: </p>
+
+<blockquote>
+  <p><tt>PKZIP radedoc *.doc </tt></p>
+</blockquote>
+
+<p>kreira arhivu koja se zove RADEDOC.ZIP i u nju smešta sve fajlove sa extenzijom .DOC.
+Uglavnom su mu mogućnosti slične mogućnostima ARJ arhivera koji mu je preuzeo primat. </p>
+
+<h4>PKUNZIP </h4>
+
+<p>Da bi ste dearhivirali arhive kreirane sa PKZIPom morate koristiti poseban dearhiver
+koji se zove PKUNZIP. Prosto dearhiviranje .ZIP arhiva vrši se sa naredbom: </p>
+
+<blockquote>
+  <p><tt>PKUNZIP &lt;ime_arhive&gt; </tt></p>
+</blockquote>
+
+<p>Ukoliko su fajlovi arhivirani zajedno sa direktorijumima ili lozinkom i sl., morate
+upotrebiti i odgovarajuće svičeve da povratite te informacije.</p>
+
+<hr>
+
+<p><a name="RVS"></a></p>
+
+<p>RVS </p>
+
+<p>RView Shell program nije arhiver ali je vrlo koristan za početnike. Spada u grupu
+tkzv. shell programa kojima se preko prostih menija omogućava pregled i dearhiviranje
+fajlova. Podržava više formata arhiva (.ARJ, .LZH, .ZIP, .ARC itd.). </p>
+
+<p>Da bi ste sa RVS-om dearhivirali neki fajl iz Vaše arhive potrebno je da imate
+odgovarajući arhiver na Vašem Hard disku. Program Vam pomaže da preko prostih menija
+pregledate sadržaj arhive i da fajl koji Vam je potreban dearhivirate, pregledate ili
+odštampate bez poznavanja sintakse naredbe kojom se to radi. Program se startuje
+naredbom: </p>
+
+<blockquote>
+  <p><tt>RVS [ime arhive] </tt></p>
+</blockquote>
+
+<hr>
+
+<p><a name="_Toc324665438"></a></p>
+
+<p>Šta nabaviti? </p>
+
+<p>Predlog šta bi od UTIL-iti programa trebalo da imate na Vašem disku:</p>
+
+<blockquote>
+  <dl>
+    <dt><a href="#SPEED">SPEED</a></dt>
+    <dt><a href="#CORETEST">CORETEST</a></dt>
+    <dt><a href="#_Toc324665439">DISKDUPE</a></dt>
+    <dt><a href="#_Toc324665440">NORTON&nbsp;UTILITIES</a></dt>
+    <dt><a href="#_Toc324665441">WINCAT</a></dt>
+    <dt><a href="#_Toc324665442">SPACE</a></dt>
+  </dl>
+</blockquote>
+
+<h4><a name="SPEED"></a>SPEED</h4>
+
+<p>Program SPEED imaju svi vlasnici PC kompjutera. To je najosnovniji programčić za
+grafički prikaz brzine rada kompjutera. Pokazuje brzinu: <a href="../hardware/hw_cj_cpu.htm">procesora</a>, koprocesora i <a href="../hardware/hw_cj_video_kartica.htm">video kartice</a>.</p>
+
+<h4><a name="CORETEST"></a>CORETEST</h4>
+
+<p>Namenjen prikazivanju brzine prenosa koju ima Hard disk. Pokazuje sledeće parametre:</p>
+
+<blockquote>
+  <dl>
+    <dt>Kapacitet <a href="../hardware/hw_cj_hdd.htm">Hard diska</a> u MB</dt>
+    <dt>Broj cilindara, glava i sektora</dt>
+    <dt>Brzinu prenosa ako je čitanje:</dt>
+    <dd>baferisano</dd>
+    <dd>sekvencijalno</dd>
+    <dd>slučajnim pristupom</dd>
+    <dt>Zatim izveštaj brzini:</dt>
+    <dd>prosečno vreme pretraživanja</dd>
+    <dd>pretraživanje trag do traga</dd>
+    <dd>PERFOMANCE INDEX odnosno ukupna ocena brzine Vašeg Hard diska</dd>
+  </dl>
+</blockquote>
+
+<h4><a name="_Toc324665439"></a>DISKDUPE </h4>
+
+<p>Baš simpatieno ime. Srećom Amerikaci nemaju Vuka. Program se u stvari zove Disk djup
+i namenjen je pravljenju indentičnih kopija disketa, upoređivanju već kopiranih ili
+formatiranju tek kupljenih <a href="../images/fdbooteta.gif">disketa</a>. </p>
+
+<h4><a name="_Toc324665440"></a>NORTON UTILITIES </h4>
+
+<p>Serija programskih alata za održavanje dobrog zdravlja Vašeg kompjutera i fajlova na
+Hard disku. Za sve operacije koje želite da uradite imate pripremljen NORTON shell, a u
+toku izvršavanja lep grafički prikaz i sve potrebne dodatne informacije. Programski
+paket startujete naredbom NORTON. Pojaviće Vam se šel prozor i ponuditi rad sa nekim od
+sledećih programa:</p>
+
+<blockquote>
+  <dl>
+    <dt>NORTON DISK DOCTOR</dt>
+    <dt>SPEED DISK</dt>
+    <dt>CALIBRATE</dt>
+    <dt>RESCUE itd.</dt>
+  </dl>
+</blockquote>
+
+<h4><a name="_Toc324665441"></a>WINCAT </h4>
+
+<p>Windows aplikacija namenjena katalogizaciji <a href="../images/fdbooteta.gif">disketa</a>.
+Program obavlja operacije pretraživanja podataka o fajlovima nad katalogiziranim
+disketama. Svaku disketu posebno upisujete u datoteku WINCAT-a samo jednom (ako izvršite
+promenu sadržaja diskete to radite opet) a sve operacije pregleda i štampanja
+izveštaja, lista ili spiska disketa radite bez ponovnog ubacivanja disketa u <a href="../hardware/hw_cj_flopi_drajv.htm">flopi drajv</a>. Obavezno nabavite ukoliko radite
+sa veaim brojem disketa ili sa velikim brojem fajlova na disketama. </p>
+
+<p>Rad sa WinCat-om je lagan, sve akcije radite pomoću <a href="../hardware/hw_mish.htm">miša</a>.
+Postoje i dodatne mogućnosti, npr. da prilikom katalogizacije, diskete odvajate po
+grupama. Sami se organizujte po svojim potrebama, možete koristiti glavne grupe: WINDOWS,
+MS DOS, GRAFIKA, DOKUMENT, SYSTEM itd. </p>
+
+<h4><a name="_Toc324665442"></a>SPACE </h4>
+
+<p>Maleni program koji Vam grafički prikaže zauzet i slobodan prostor na Hard disku,
+radi i sa disketama. Ukoliko ga startujete sa: <tt>SPACE /t</tt> - dobićete izveštaj o
+ukupno slobodnom i zauzetom prostoru.</p>
+</body>
+</html>

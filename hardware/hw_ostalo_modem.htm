@@ -1,0 +1,725 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>Modem, kompletno uputstvo</title>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="100">
+
+<h1><a name="Modem"></a>MODEM</h1>
+
+<p align="center"><img src="../images/modem.gif" WIDTH="505" HEIGHT="363"></p>
+
+<p align="center">Fax-modem <a href="http://www.usr.com">US Robotics</a> 33,600bps,
+internal</p>
+
+<p>Zamena za skupe fax mašine. Fax poruke se primaju i šalju direktno sa kompjutera. Ako
+želite da pošaljete neki pisani dokument sa papira morate ga prvo uskenirati. Fax prima
+i šalje poruke dok je kompjuter uključen. <br>
+Modemske komunikacije su veoma popularne u poslednje vreme. Za kratko vreme mogu se
+preneti veoma važne informacije u izvornom obliku, bez gubitka kvaliteta kao što je to
+slueaj ako se dokumenta šalju faksom. <br>
+Voice opcija predstavlja elektronsku verziju telefonske sekretarice sa mnogo, mnogo više
+funkcija.</p>
+
+<hr>
+
+<p><img src="../images/i_nota.gif" WIDTH="32" HEIGHT="32"><b>Važno!!! Kada kompjuter ne koristite nekoliko dana,
+obavezno priključak telefona koji ide u modem izvucite iz konektora koji ide u kompjuter.
+Preko unutrašnje i spoljašnje telefonske instalacije Vaša matična ploča direktno je
+spojena sa telefonskim svetom. Koliko je dobro može biti i loše, naročito kada napolju
+grmi i seva.</b> </p>
+
+<hr>
+
+<h2>Uputstvo za instalaciju, podešavanje i korišćenje modema.</h2>
+
+<p>Funkcije Fax ili Voice modela uglavnom su podržane posebnim softverom, isključivo
+preko sistema menija. Ovde će uglavnom biti reči o funkcijama i radu sa modemima. </p>
+
+<hr>
+
+<dl>
+  <dt><a href="#_PreKupov">Pre kupovine</a></dt>
+  <dd>Osnovne funkcije modema</dd>
+  <dt><a href="#_Instal">Instaliranje modema</a></dt>
+  <dd>Externi model</dd>
+  <dd>Interni model</dd>
+  <dd>Instalacija softvera</dd>
+  <dt><a href="#_PriprZaKomun">Priprema za komunikaciju</a></dt>
+  <dd>Modovi komunikacije</dd>
+  <dd>DATA format</dd>
+  <dd>Protokol</dd>
+  <dt><a href="#_Komunikacija">Komunikacija</a></dt>
+  <dt><a href="#_Pojmovi">Pojmovi</a></dt>
+  <dt><a href="#_ATkomande">AT komande</a></dt>
+  <dd>Osnovne AT komande</dd>
+  <dd>Extended AT komande</dd>
+</dl>
+
+<hr>
+
+<h2><a name="_PreKupov"></a>Pre kupovine</h2>
+
+<p>Najvažnija odluka koju morate doneti pre kupovine je da li modem treba da bude
+eksterni ili interni. Zatim na kojoj brzini treba da radi i da li su Vam potrebne dodatne
+funkcije kao što je Fax ili Voice odnosno telefonska sekretarica. </p>
+
+<p>U časopisima, koji se bave kompjuterima, možete naći uporedni test više modela. To
+će Vam biti velika pomoć ukoliko već nemate prethodnih iskustava. </p>
+
+<h3>Osnovne funkcije modema</h3>
+
+<p>Uloga modema je povezivanje dva <a href="#__DTE">DTE</a> ili <a href="#__DCE">DCE </a>uređaja, slanje ili primanje fax i glasovnih
+poruka. Osnovne funkcije su: auto-dial, auto-answer, revers mode dialing; ring, busy and
+dial tone detection i manual dial option.</p>
+
+<hr>
+
+<h2><a name="_Instal"></a>Instaliranje modema</h2>
+
+<blockquote>
+  <dl>
+    <dt><a href="#__ExtModel">Externi model</a></dt>
+    <dt><a href="#__IntModel">Interni model</a></dt>
+    <dt><a href="#__InstalSoftv">Instalacija softvera</a></dt>
+  </dl>
+</blockquote>
+
+<h4><a name="__ExtModel"></a>Eksterni model</h4>
+
+<p>Uz eksterni modem u posebnoj kutiji dobijate: uputstvo za korišćenje, kabl za
+povezivanje sa telefonskom linijom, data kablom, softver za rad sa modemom. Često se desi
+da uz eksterni modem ne dobijete softver i data kabl, iz prostog razloga što se eksterni
+modemi mogu &quot;kačiti&quot; skoro na sve uređaje koji imaju RS232 interfejs a za
+mnoge od njih softver i nije potreban. 
+
+<ul>
+  <li>Za vezu između <a href="#__DTE">DTE </a>i <a href="#__DCE">DCE </a>potreban Vam je straight through kabl ( Modem -
+    PC ). </li>
+  <li>Za vezu između DCE i DCE potreban Vam je null modem kabl (PC - PC). </li>
+</ul>
+
+<p>Na prednjoj ploči modema nalazi se 8 statusnih, svetlećih dioda. Omogućavaju Vam
+praćenje toka veze i rada modema. 
+
+<ul>
+  <li>HS (High Speed) <br>
+    Svetli kada modem radi najvećom brzinom.</li>
+  <li>AA (Auto-Answer) <br>
+    Svetli ukoliko je modem podešen da se javlja na poziv automatski. Kada modem prima poziv
+    LE dioda se gasi. Modem ae se javiti na broj &quot;zvona&quot; koji su definisani u
+    regidtru S0. Predefinisana vrednost za S0 je 0. Znači NE javlja se na poziv.</li>
+  <li>CD (Carrier Detect) <br>
+    Svetli kada modem primi modem tone sa drugog modema s kojim je u vezi.</li>
+  <li>OH ( Off Hook ) <br>
+    Svetli kada modem is dobije jednosmernu struju sa tel. linije na koju je povezan. Kao kada
+    podignete slušalicu</li>
+  <li>RD (Receive Data) <br>
+    Trepti kada modem prima informacije sa kompjutera ili serijskog uređaja na koji je
+    nakčeen.</li>
+  <li>SD (Send Data) <br>
+    Trepti kada modem šalje informacije do kompjutera ili serijskog uređaja na koji je
+    nakačen.</li>
+  <li>TR (Terminal Ready) <br>
+    Svetli kada je kompjuter spreman da prima ili pošalje podatke. Pokazuje stanje DTR na
+    kompjuteru ili terminalu.</li>
+  <li>MR (Modem Ready) <br>
+    Svetli kada je modem spreman za rad. Trepti kada modem vrši samotestiranje. <br>
+  </li>
+</ul>
+
+<h3><a name="__IntModel"></a><a href="../images/modem.gif">Interni model</a> </h3>
+
+<p>Uz interni modem na kartici dobijate: uputstvo, kabl za povezivanje na telefonsku
+liniju, softver za rad sa modemom. </p>
+
+<p>Komponente na kartici nemojte dodirivati prstima, konstatujte šta na kartici možete
+podešavati spolja kada je postavite u kompjuter. Proverite i jasno obeležite koji je
+PHONE a koji LINE konektor za povezivanje sa telefonskom linijom. Prema Vašim potrebama
+podesite džampere na kartici na odgovarajući COM port.</p>
+
+<hr>
+
+<p><img src="../images/i_nota.gif" WIDTH="32" HEIGHT="32">Na adresi i interaptu na kome ae raditi interni modem
+NE SME raditi ni jedan drugi uređaj ili softver. </p>
+
+<hr>
+
+<p>Pročitajte pažljivo kompletno uputstvo za upotrebu. Obieno se modem podešava na COM
+2 i IRQ 3. </p>
+
+<p>Podaci za serijske portove: </p>
+<div align="center"><center>
+
+<table border="1" cellpadding="2" cellspacing="3">
+  <tr>
+    <td>&nbsp;</td>
+    <td>adresa</td>
+    <td>IRQ</td>
+  </tr>
+  <tr>
+    <td>COM 1</td>
+    <td>3F8 </td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>COM 2</td>
+    <td>2F8 </td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>COM 3</td>
+    <td>3E8 </td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>COM 4</td>
+    <td>2E8 </td>
+    <td>3</td>
+  </tr>
+</table>
+</center></div>
+
+<p>Ubacite karticu u kompjuter, povežite je sa telefonskom linijom i pomoćnim telefonom.
+U tom slučaju pomoćni telefon će raditi kada je kompjuter uključen i isključen pa je
+to jedan od načina da se proveri da li je priključivanje na telefonsku liniju dobro
+izvedeno. Ako imate signal u telefonu, imaće ga i modem. </p>
+
+<h3><a name="__InstalSoftv"></a>Instalacija softvera</h3>
+
+<p>Vratite kompjuter na svoje mesto i uključite ga a zatim instalirajte <a href="../intro/intro_terminologija.htm#_Softver">softver</a>. Skoro svaki softver pre
+svoje instalacije tražiae od Vas da potvrdite neke testove i na taj način utvrdite da li
+je ugradnja modema bila dobra. Po uspešnoj ugradnji modema, softver će tražiti od Vas
+podatke za: tip telefonske centrale na koju ste povezani, da li ste na lokalnom ili
+direktnom telefonu i sl. a zatim će se instalirati na <a href="hw_cj_hdd.htm">hard disk</a>.</p>
+
+<hr>
+
+<h2><a name="_PriprZaKomun"></a>Priprema za komunikaciju</h2>
+
+<blockquote>
+  <dl>
+    <dt><a href="#__ModKomun">Modovi komunikacije</a></dt>
+    <dt><a href="#__DataFormat">DATA format</a></dt>
+    <dt><a href="#__Protokol">Protokol</a></dt>
+  </dl>
+</blockquote>
+
+<h3><a name="__ModKomun"></a>Modovi komunikacije</h3>
+
+<p>U toku rada modem može biti u <i>command </i>ili u <i>data </i>modu. U <i>command </i>modu
+sve karaktere izvršava kao komande. U <i>data </i>modu sve podatke prosleđuje kompjuteru
+ili uređaju s kojim korespondira. Izuzetak su ESC sekvence koje služe da u toku rada u <i>data
+</i>modu modem obradi neku komandu bez prekida veze. Znači, kada ukucavate komande za
+setovanje ili kada &quot;ručno&quot; birate broj, a sve to iz komandne linije, u <i>command
+</i>ste modu. Po uspostavljanju veze, prelazite u <i>data </i>mod. </p>
+
+<h3><a name="__DataFormat"></a>Data format</h3>
+
+<p>Najbitniji detalj kod podešavanja parametara komunikacije. To je npr. sledeća forma
+9600 8N1. Prvi broj (9600) pretstavlja brzinu na kojoj će se odvijati veza. Brzina na
+kojoj ćete raditi zavisi od modema i kvaliteta telefonske veze. Dužina reči će biti 8
+bita bez kontrole pariteta (N) i sa jednim stop bitom (1). To su parametri koji se
+usaglašavaju sa korespodentom. </p>
+
+<p>Preko serijskog porta podaci se šalju bit po bit. Bajtovi se prosleđuju bit po bit
+zajedno sa kontrolnim bitovima. Ta kombinacija u okviru bajta zove se <i>data </i>format.
+Sastoji se iz starnog bita (start bit), dejta bita (<i>data </i>bit), pariti (<i>parity </i>bit)
+i stop bita (stop bit). Dva modema koji komuniciraju, moraju raditi sa istim dejta
+formatom ( 1 startni, 7 li 8 dejta, pariti i 1 ili 2 stop bita). </p>
+
+<h3><a name="__Protokol"></a>Protokol</h3>
+
+<p>Protokoli su BELL i CCITT a njima se određuje brzina prenosa u bodima (<i>baud rate</i>)
+za određeni standard (BELL ili CCITT). Npr.: <br>
+</p>
+
+<table border="1">
+  <tr>
+    <td width="123">&nbsp;</td>
+    <td width="76"><p align="center">bps </td>
+    <td width="57">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="123">BELL 103 </td>
+    <td width="76">300 </td>
+    <td width="57">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="123">CCITT v.21 </td>
+    <td width="76">300 </td>
+    <td width="57">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="123">BELL 212A </td>
+    <td width="76">1 200 </td>
+    <td width="57">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="123">CCITT v.22 </td>
+    <td width="76">1 200 </td>
+    <td width="57">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="123">CCITT v.22bis </td>
+    <td width="76">2 400 </td>
+    <td width="57">&nbsp;</td>
+  </tr>
+</table>
+
+<h2><a name="_Komunikacija"></a>Komunikacija</h2>
+
+<p>Pretpostavljam da ste modem i softver instalirali isparavno. Sada je potrebno podesiti
+sadržaj <a href="hw_cj_ram.htm#__STATMEMinfo">NV RAM</a>-a. Prema modemu i centrali, na
+koju ste povezani, ukucajte komande koje ae odgovarati vezama koje imate nameru da
+ostvarujete. Znači: </p>
+
+<blockquote>
+  <pre>AT&amp;F    Da resetujemo poeetno stanje na predefinisano.
+ATX3    da modem ne traži dialtone signal po preuzimanju  tel. linije.
+</pre>
+</blockquote>
+
+<p>Zatim ćete ove izmene snimiti u NV RAM komandom AT&amp;W0 u profile 0. Imate slobodan
+još jedan memorijski prostor, profile 1. Sadržaj jednog profile mesta u memoriji
+kopirate u aktivni profile komandom ATZn. Ovo je lakši način inicijalizovanja modema, ne
+morate koristiti duge inicijalizacione stringove prilikom stratovaja komunikacionog
+softvera, već samo ATZ0. Tako da za sve izmene koje eventualno budete pravili, nećete
+morati menjati sve inicijalizacione stringove. </p>
+
+<p>Sada ste već došli do podešavanja koja se odnose na pojedinačne veze. Za svaki BBS
+ili kompjuter s modemom, sa kojim ete komunicirati podešavate parametre komunikacije. </p>
+
+<p>Npr. za komunikaciju sa SezamPro BBS-om, podesite sledeće parametre i pozovite broj
+3222-592: </p>
+
+<pre>14 400 v.42bis modem    57600 8N1. To &quot;normalno&quot; neće raditi zbog kvaliteta naših telefonskih veza. Praksa je brzinu smanjila na 19200.
+2 400 modem (MNP5)      9600 8N1.
+</pre>
+
+<p>Šta da Vam kažem nego da Vam poželim puno sreće i dobre veze. Vidimo se na
+Internetu. Moj <br>
+e-mail je procom@EUnet.yu</p>
+
+<h3>Testiranje modema i veze</h3>
+
+<p>AT&amp;T8 </p>
+
+<h3>Registri</h3>
+
+<h2><a name="_Pojmovi"></a>Pojmovi</h2>
+
+<p><a name="__DTE"></a>DTE - Data Terminal Equipment. Označava terminale, kompjutere ili
+printere.</p>
+
+<p><a name="__DCE"></a>DCE - Data Communications equipment. Oprema instralirana kod
+korisnika, mora da omogući uspostavljanje, održavanje i prekidanje veze sa DTE</p>
+
+<p>MODEM MODulator - DEModulator </p>
+
+<p>REN Ringer Equivalence Number. Ukoliko je više telefona na jednoj liniji, u centrali
+na kojoj su nakačeni mora se pojačati signal kojim se pobuđuju. </p>
+
+<p>FCC Federal Communications Commision. Zakon u Americi po kome se regulišu pravila u
+telefonskoj mreži ( npr. class B - klasa za određene uslove). </p>
+
+<p>HAYES Standard za modemske komunikacije. </p>
+
+<p>AT ATtention to the modem. Sve naredbe modemu počinju prefiksom AT. </p>
+
+<p>FULL duplex pritisnuti taster kao signal ide na remote kompjuter pa nazad na monitor. </p>
+
+<p>HALF duplex pritisnuti taster se odmah prikazuje na monitoru. </p>
+
+<p>BBS Bulettin Boards System. </p>
+
+<p>Leased line - 2 žice između kompjutera ili terminala. Na većim razdaljinama to su
+iznajmljene linije kod pošte preko kojih su direktno povezani kompjuteri ili terminali. </p>
+
+<p>BAUD </p>
+
+<p>BPS Bits Per Second. </p>
+
+<p>NV RAM Non Volatile RAM- neispariva RAM memorija. Ne gubi svoj sadržaj po
+isključivanju kompjutera i modema. </p>
+
+<p>AT&amp;P1 Za evropske zemlje 33/67. </p>
+
+<p>CCITT International Consultative Commitee on Telegraphy and Telephony. </p>
+
+<hr>
+
+<h1><a name="_ATkomande"></a>AT KOMANDE</h1>
+
+<p>Opis osnovnih, ekstended i v.42bis komandi. Osim osnovnih, ekstended i v.42bis komande
+mogu se razlikovati od modela do modela modema. U komandnom baferu možete imati do 40
+karaktera. </p>
+
+<p>Predefinisane vrednosti ispisane su podebljanim tekstom. 
+
+<ul>
+  <li><a href="#__OsnATkoman">Osnovne AT komande</a></li>
+  <li><a href="#__ExtATkom">Extended AT komande</a></li>
+</ul>
+
+<hr>
+
+<h3><a name="__OsnATkoman"></a>Osnovne AT komande</h3>
+
+<table border="1">
+  <tr>
+    <td width="54">Komanda </td>
+    <td width="47"><p align="center">Opcija </td>
+    <td width="320">Funkcija </td>
+    <td width="58">Preporuka </td>
+  </tr>
+  <tr>
+    <td width="54">A/</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">Ponavlja poslednju komandu iz memorije modema </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">+++</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">Esacape characters omoguaavaju modemu da iz data moda pređu u command
+    mod. Kada kucate ove karaktere, pojavljuju se na drugom modemu a na svom monitoru vidite
+    odgovor OK koji znači da ste u command modu. Da se vratite i data mod, otkucajte AT0 i
+    pritisnite ENTER. Registar S2 definiše Esacape karakter. </td>
+    <td width="58">S2=043 </td>
+  </tr>
+  <tr>
+    <td width="54">AT</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">(ATtention)Potrebno je otkucati pre svih sledećih komandi. Prenosi modemu
+    informacije o brzini prenosa, data formatu i kontroli pariteta koju koristi kompjuter ili
+    modem sa koga se informacije šalju. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">A</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">Odgovara na poziv. Prebacuje glasovni poziv u data mode. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Bn</td>
+    <td width="47">0 </td>
+    <td width="320">CCITT mode </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">1 </td>
+    <td width="320">Bell mode </td>
+    <td width="58">B1 </td>
+  </tr>
+  <tr>
+    <td width="54">Dx</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">0 - 9, A - D, # i * </td>
+    <td width="58">ATDP, </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">P </td>
+    <td width="320">pulsno biranje </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">R </td>
+    <td width="320">Revers mod. Prebacije modem u Answer mod odmah posle biranja. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">T </td>
+    <td width="320">tonsko biranje </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">W </td>
+    <td width="320">čeka na drugi dial tone, recimo posle izlaska s lokalne centrale. Vreme
+    čekanja u sekundama izraženo je u S7. Ako nema drugog tona prijavljuje BUSY ili NO
+    DIALTONE. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">, </td>
+    <td width="320">pauza od 2 sekunde ili u trajanju koje je setovano u S8. Možete koristiti
+    više zareza zaredom. </td>
+    <td width="58">S8=5 </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">; </td>
+    <td width="320">Povratak u command mod posle biranja. Smešta se na kraj komande. <p>Koristi
+    se kada je potrebno posle biranja nastaviti rad u komandnom modu, recimo u direktnoj vezi.
+    </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">DS=n</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">Bira jedan od eetiri memorisana broja u NV RAM-u. n je cifra 0 do 3. Broj
+    memorišete naredbom &amp;Z. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">En</td>
+    <td width="47">E0 </td>
+    <td width="320">Isključuje prikazivanje naredbi na monitoru. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">E1 </td>
+    <td width="320">Prikazuje naredbe na monitoru. </td>
+    <td width="58">E1 </td>
+  </tr>
+  <tr>
+    <td width="54">Hn</td>
+    <td width="47">H0 </td>
+    <td width="320">Prekid veze (kao da spušta slušalicu). </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">H1 </td>
+    <td width="320">Preuzima liniju (kao podignuta slušalica) </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">In</td>
+    <td width="47">I0 </td>
+    <td width="320">ID kod modema </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">I1 </td>
+    <td width="320">ID ROM-a </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">I2 </td>
+    <td width="320">test memorije </td>
+    <td width="58">I2 </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">I3 </td>
+    <td width="320">ID v.42bis-a </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">I4 </td>
+    <td width="320">ID interni </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Ln</td>
+    <td width="47">L0 ili 1 </td>
+    <td width="320">najtiši zvuk iz zvuenika. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">L2 </td>
+    <td width="320">srednja jačina zvuka iz zvučnika. </td>
+    <td width="58">L2 </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">L3 </td>
+    <td width="320">najača jačina zvuka. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Mn</td>
+    <td width="47">M0 </td>
+    <td width="320">isključuje interni zvučnik. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">M1 </td>
+    <td width="320">Isključuje interni zvučnik po uspostavljanju veze. </td>
+    <td width="58">M1 </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">M2 </td>
+    <td width="320">ne isključuje interni zvučnik. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">M3 </td>
+    <td width="320">isključuje interni zvučnik dok bira broj. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Nn</td>
+    <td width="47">N0 </td>
+    <td width="320">uspostavlja brzinu koju ima DTE. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">N1 </td>
+    <td width="320">pregovara o brzini na kojoj ae se odvijati komunikacija. </td>
+    <td width="58">N1 </td>
+  </tr>
+  <tr>
+    <td width="54">On</td>
+    <td width="47">O0 </td>
+    <td width="320">vraća se u data mod. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">O1 </td>
+    <td width="320">&nbsp;</td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">P</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">postavlja pulsno biranje kao predefinisano </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Qn</td>
+    <td width="47">Q0 </td>
+    <td width="320">Modem šalje odgovore na komande koje su mu zadate. </td>
+    <td width="58">Q0 </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">Q1 </td>
+    <td width="320">isključuje odgovore modema, recimo ako je nakačen na printer. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Sr?</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">Čita sadržaj iz registra r koji može biti 0 do 29. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Sr=n</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">Upisuje u registar r vrednost n. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">T</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">postavlja tonsko biranje kao predefinisano </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&amp;Vn</td>
+    <td width="47">V0 </td>
+    <td width="320">prikazuje aktivini i profile 0. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">V1 </td>
+    <td width="320">prikazuje aktivini i profile 1. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Xn</td>
+    <td width="47">X0 </td>
+    <td width="320">ne može da detektuje busy i dialtone </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">X1 </td>
+    <td width="320">ne traži busy i dialtone </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">X2 </td>
+    <td width="320">detektuje dialtone, ne detektuje busy signal. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">X3 </td>
+    <td width="320">detektuje busy, ne detektuje dialtone signal. </td>
+    <td width="58">X3 </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">X4 </td>
+    <td width="320">busy i dialtone detekcija </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Yn</td>
+    <td width="47">Y0 </td>
+    <td width="320">Modem ne šalje i ne odgovara na break signal. </td>
+    <td width="58">Y0 </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">Y1 </td>
+    <td width="320">Modem šalje signal 4 sekunde pre isključivanja. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">Zn</td>
+    <td width="47">Z0 </td>
+    <td width="320">Upisuje u aktivni profil sadržaj iz profile 0. </td>
+    <td width="58">Z0 </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">Z1 </td>
+    <td width="320">Upisuje u aktivni profil sadržaj iz profile 1. </td>
+    <td width="58">&nbsp;</td>
+  </tr>
+</table>
+
+<p>Sve komande mogu se prekinuti sa CTRL+X. <br>
+</p>
+
+<h3><a name="__ExtATkom"></a>Ekstended AT komande</h3>
+
+<table border="1">
+  <tr>
+    <td width="54">Komanda </td>
+    <td width="47"><p align="center">Opcija </td>
+    <td width="320">Funkcija </td>
+    <td width="58">Preporuka </td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">&nbsp;</td>
+    <td width="58">&nbsp;</td>
+  </tr>
+  <tr>
+    <td width="54">&nbsp;</td>
+    <td width="47">&nbsp;</td>
+    <td width="320">&nbsp;</td>
+    <td width="58">&nbsp;</td>
+  </tr>
+</table>
+</body>
+</html>
